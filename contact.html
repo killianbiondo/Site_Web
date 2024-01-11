@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="site de photographe" />
+  <title>Contact</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="images/logo/logo_mini.png" />
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo/logo.png" alt="Un logo" srcset="images/logo/logo.svg" />
+
+    <nav>
+      <a href="accueil.html">Accueil</a>
+      <a href="photos.html">Photos</a>
+      <a href="mon_travail.html">Mon travail</a>
+      <a href="prestations.html">Prestations</a>
+      <a class="selected" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="banner_image"
+    style="background-image: url('images/top_section/contact.jpg'); background-position: 50% 90%;">
+    <div class="banner_image_overlay">
+        <h1>Contact</h1>
+    </div>
+  </section>
+
+  <main>
+    <div class="flex_ct">
+      <section class="contact">
+        <div>
+          <p><strong>Damien Juter</strong></p>
+          <p>24 ans</p>
+          <p>Habite à Villeurbanne</p>
+        </div>
+
+        <div>
+          <p><strong>Téléphone :</strong> +33(6) 32 54 78 96</p>
+          <p><strong>Email :</strong> damien.photo@gmail.com</p>
+        </div>
+
+        <div>
+          <p><strong>Coordonnées de mon studio :</strong></p>
+          <p>Studio 147 , Rue Dr Crestin</p>
+          <p>7ème arrondissement</p>
+          <p>69007, Lyon</p>
+        </div>
+
+        <img class="img_code" src="images/logo/qr_code.png" alt="qr code" style="margin-top: 30px;">
+
+      </section>
+
+
+      <img class="img_contact" src="images/logo/damien.jpg" alt="damien">
+
+    </div>
+
+
+    <p>
+      N'hésitez pas à me contacter pour me faire part de votre demande. Je
+      suis également joignable par téléphone.
+    </p>
+
+
+    <span id="contact" class="goto"></span>
+    <h3>Prendre contact maintenant</h3>
+
+
+
+    <form action="#" onsubmit="sendmessage()">
+
+
+      <section class="flex_contact">
+        <input type="text" class="form1" name="name" required maxlength="20" placeholder="Nom">
+        <input type="text" class="form1" name="name" required maxlength="25" placeholder="Prénom">
+        <input class="form1" id="js1" placeholder="Date de l'évènement" type="text" required
+          onfocus="(this.type='date')" onblur="date(this.value)">
+      </section>
+
+
+      <section class="flex_contact">
+        <input type="text" class="form2" name="email" required maxlength="50" placeholder="Email">
+
+
+        <select name="category" class="form3" id="list" required>
+          <option value="" disabled selected hidden>Type de photographie</option>
+          <option value="1">Évènement</option>
+          <option value="2">Mariage</option>
+          <option value="3">Portrait</option>
+          <option value="4">Paysage/Architecture</option>
+          <option value="5">Objet</option>
+          <option value="6">Reportage entreprise</option>
+          <option value="7">Autre</option>
+        </select>
+      </section>
+
+
+      <textarea name="message" required id="message" cols="30" rows="150" placeholder="Message"
+        minlength="1"></textarea>
+
+      <input class="devis" type="submit" value="Envoyer" style="width: 100%;">
+    </form>
+
+  </main>
+
+
+
+  <footer>
+    <section>
+      <h3>Coordonnées</h3>
+      <p>Studio 147</p>
+      <p>Rue Dr Crestin</p>
+      <p>69007, Lyon</p>
+    </section>
+    <section class="social">
+      <a href="https://twitter.com/"> <img class="img_30" src="images/logo/twitter.png" alt="twitter"> </a>
+      <a href="https://www.instagram.com/ "> <img class="img_30" src="images/logo/instagram.png" alt="instagram"></a>
+      <a href="https://fr.linkedin.com/"><img class="img_30" src="images/logo/linkedin.png" alt="linkedin"></a>
+
+    </section>
+    <section>
+      <h3>Contact</h3>
+      <p>damien.photo@gmail.com</p>
+      <p>+33(6) 32 54 78 96</p>
+    </section>
+  </footer>
+
+  <script>
+    function date(txt) {
+      if (txt == '') {
+        document.getElementById('js1').type = 'text'
+      }
+    }
+
+    function sendmessage() {
+      alert("Votre message à bien été envoyé")
+    }
+
+
+    var temp = localStorage.getItem("type");
+    var list = document.getElementById('list');
+
+    for (var i, j = 0; i = list.options[j]; j++) {
+      if (i.value == temp) {
+        list.selectedIndex = j;
+        localStorage.clear();
+        break;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+

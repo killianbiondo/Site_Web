@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="site de photographe" />
+  <title> Prestations</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="images/logo/logo_mini.png" />
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo/logo.png" alt="Un logo" srcset="images/logo/logo.svg" />
+
+    <nav>
+      <a href="accueil.html">Accueil</a>
+      <a href="photos.html">Photos</a>
+      <a href="mon_travail.html">Mon travail</a>
+      <a class="selected" href="prestations.html">Prestations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="banner_image" style="background-image: url('images/top_section/prestations.jpg')">
+    <div class="banner_image_overlay">
+        <h1>Mes prestations</h1>
+    </div>
+  </section>
+
+
+
+  <main class="page_prestations">
+
+    <div class="flex_pr">
+      <section class="prestations">
+        <img src="images/prestations/prestations1.jpg" alt="evenements" style="object-position: 50% 50%;">
+        <h4>Évenements</h4>
+        <p>Anniversaires, baptêmes...</p>
+        <p>À partir de 150€/h</p>
+        <input type="button" class="devis" value="Demande de devis" onclick="sendtype(1)">
+
+      </section>
+
+      <section class="prestations">
+        <img src="images/prestations/prestations2.jpg" alt="mariages" style="object-position: 50% 33%;">
+        <h4> Mariages</h4>
+        <p>200€/h</p>
+        <input type="button" class="devis" value="Demande de devis" onclick="sendtype(2)">
+      </section>
+
+      <section class="prestations">
+        <img src="images/prestations/prestations3.jpg" alt="portrait" style="object-position: 50% 20%;">
+        <h4>Portraits</h4>
+        <p>Photos seul ou en groupe</p>
+        <p>300€ les 5 photos</p>
+        <input type="button" class="devis" value="Demande de devis" onclick="sendtype(3)">
+      </section>
+    </div>
+
+
+    <div class="flex_pr">
+
+      <section class="prestations">
+        <img src="images/prestations/prestations4.jpg" alt="paysage" style="object-position: 50% 50%;">
+        <h4>Paysages, Architecture</h4>
+        <p>Nature, bâtiments, intérieurs...</p>
+        <p>150€ les 3 photos</p>
+        <input type="button" class="devis" value="Demande de devis" onclick="sendtype(4)">
+      </section>
+
+      <section class="prestations">
+        <img src="images/prestations/prestations5.jpg" alt="objets" style="object-position: 50% 100%;">
+        <h4>Objets</h4>
+        <p> Petits objets, avec éclairage studio</p>
+        <p> 50€ les 2 photos</p>
+        <input type="button" class="devis" value="Demande de devis" onclick="sendtype(5)">
+      </section>
+
+      <section class="prestations">
+        <img src="images/prestations/prestations6.jpg" alt="report" style="object-position: 50% 50%;">
+        <h4>Reportages entreprise</h4>
+        <p> Reportage photo ou vidéo</p>
+        <p> 200€ la demi-journée</p>
+        <input type="button" class="devis" value="Demande de devis" onclick="sendtype(6)">
+      </section>
+
+    </div>
+
+
+
+    <p>Les catégories ci-dessus représentent les domaines dans lesquels je suis compétent. <br>
+      Si vous avez besoin d’un devis qui ne figure pas dans les catégories ci-dessus, merci de me demander dirrectement
+      dans la section contact (par mail ou par téléphone). Je ferais de mon mieux pour répondre à votre demande si elle
+      se situe dans mon domaine de compétences.</p>
+    <br>
+
+    <p><strong>Remarque :</strong></p>
+
+    <p>Tout type de photographie doit au préalable faire l’objet d’un devis personnalisé depuis la page contact. <br>
+      Les prix peuvent varier en fonction de votre demande. <br>
+      Merci de votre compréhension.</p>
+  </main>
+
+
+  <footer>
+    <section>
+      <h3>Coordonnées</h3>
+      <p>Studio 147</p>
+      <p>Rue Dr Crestin</p>
+      <p>69007, Lyon</p>
+    </section>
+    <section class="social">
+      <a href="https://twitter.com/"> <img class="img_30" src="images/logo/twitter.png" alt="twitter"> </a>
+      <a href="https://www.instagram.com/ "> <img class="img_30" src="images/logo/instagram.png" alt="instagram"></a>
+      <a href="https://fr.linkedin.com/"><img class="img_30" src="images/logo/linkedin.png" alt="linkedin"></a>
+
+    </section>
+    <section>
+      <h3>Contact</h3>
+      <p>damien.photo@gmail.com</p>
+      <p>+33(6) 32 54 78 96</p>
+    </section>
+  </footer>
+
+  <script>
+    function sendtype(value) {
+      localStorage.setItem("type", value);
+      window.location.href = "contact.html#contact";
+    }
+  </script>
+
+
+
+</body>
+
+</html>
+
+
