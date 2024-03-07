@@ -74,8 +74,12 @@
 
 
       <section class="flex_contact">
-        <input type="text" class="form1" name="name" required maxlength="20" placeholder="Nom">
-        <input type="text" class="form1" name="name" required maxlength="25" placeholder="Prénom">
+        <input type="text" class="form1" id="nom" name="name" required maxlength="20" placeholder="Nom">
+        <script> baliseNom = document.getElementById("nom")</script> 
+        <script> let nom = baliseNom.value</script> 
+        <input type="text" class="form1" id="prenom" name="name" required maxlength="25" placeholder="Prénom">
+        <script> balisePrenom = document.getElementById("prenom")</script> 
+        <script> let prenom = baliseNom.value</script> 
         <input class="form1" id="js1" placeholder="Date de l'évènement" type="text" required
           onfocus="(this.type='date')" onblur="date(this.value)">
       </section>
