@@ -13,6 +13,7 @@
   <header>
     <img class="logo" src="images/logo/logo.png" alt="Un logo" srcset="images/logo/logo.svg" />
 
+    <!-- Permet de crée le menu -->
     <nav>
       <a href="accueil.html">Accueil</a>
       <a href="photos.html">Photos</a>
@@ -42,53 +43,40 @@
           <p><strong>Téléphone :</strong> +33(6) 32 54 78 96</p>
           <p><strong>Email :</strong> damien.photo@gmail.com</p>
         </div>
-
+        
         <div>
           <p><strong>Coordonnées de mon studio :</strong></p>
           <p>Studio 147 , Rue Dr Crestin</p>
           <p>42100, Saint-Etienne</p>
         </div>
-
         <img class="img_code" src="images/logo/qr_code.png" alt="qr code" style="margin-top: 30px;">
-
       </section>
-
-
       <img class="img_contact" src="images/logo/damien.jpg" alt="damien">
-
     </div>
-
-
+   
     <p>
       N'hésitez pas à me contacter pour me faire part de votre demande. Je
       suis également joignable par téléphone.
     </p>
 
-
     <span id="contact" class="goto"></span>
     <h3>Prendre contact maintenant</h3>
-
-
-
     <form action="#" onsubmit="sendmessage()">
-
-
       <section class="flex_contact">
         <input type="text" class="form1" id="nom" name="name" required maxlength="20" placeholder="Nom">
         <script> baliseNom = document.getElementById("nom")</script> 
-        <script> let nom = baliseNom.value</script> 
+        <script> let nom = baliseNom.value</script>
+       <script>console.log(nom); // affiche ce qui est contenu dans la balise name</script> 
         <input type="text" class="form1" id="prenom" name="name" required maxlength="25" placeholder="Prénom">
         <script> balisePrenom = document.getElementById("prenom")</script> 
         <script> let prenom = baliseNom.value</script> 
+        <script>console.log(prenom); // affiche ce qui est contenu dans la balise name</script> 
         <input class="form1" id="js1" placeholder="Date de l'évènement" type="text" required
           onfocus="(this.type='date')" onblur="date(this.value)">
       </section>
 
-
       <section class="flex_contact">
         <input type="text" class="form2" name="email" required maxlength="50" placeholder="Email">
-
-
         <select name="category" class="form3" id="list" required>
           <option value="" disabled selected hidden>Type de photographie</option>
           <option value="1">Évènement</option>
@@ -101,16 +89,12 @@
         </select>
       </section>
 
-
       <textarea name="message" required id="message" cols="30" rows="150" placeholder="Message"
         minlength="1"></textarea>
 
       <input class="devis" type="submit" value="Envoyer" style="width: 100%;">
     </form>
-
   </main>
-
-
 
   <footer>
     <section>
@@ -142,11 +126,8 @@
     function sendmessage() {
       alert("Votre message à bien été envoyé")
     }
-
-
     var temp = localStorage.getItem("type");
     var list = document.getElementById('list');
-
     for (var i, j = 0; i = list.options[j]; j++) {
       if (i.value == temp) {
         list.selectedIndex = j;
