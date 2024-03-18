@@ -32,13 +32,6 @@ body {
 
 
 
-
-/*
-*{
-border: solid red 1px;
-}
-*/
-
 /*-------------- menu navigation --------------*/
 
 header {
@@ -720,7 +713,7 @@ footer section h3 {
   object-fit: contain;
 }
 
-/* ---------------------------- responsive ----------------------------------------- */
+/* ---------------------------- responsive for pc and mobile ----------------------------------------- */
 
 @media screen and (max-width: 1024px) {
 
